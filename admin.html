@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./adminStyle.css">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Dashbord</h1>
+        <button class="refresh">Refresh</button>
+    </div>
+
+    <div id="main">
+        <div class="data">
+            <table>
+                
+                
+            </table>
+        </div>
+        <div class="info">
+            <table>
+                <tr>
+                    <th>Number Of Emails</th>
+                </tr>
+
+                <tr>
+                    <td class="numberOfEmails"></td>
+                </tr>
+                
+                
+            </table>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="./Admin.js"></script>
+</body>
+</html>

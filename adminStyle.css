@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --nav-bg-color: #558564;
+    --links-color: #95f9e3;
+    --hero-bg: #49d49d;
+    --titles: #564946;
+    --cta-bg: #2d157a;
+    --companies-bg: #69ebd0;
+}
+
+
+body{
+    min-height: 100vh;
+    width: 100vh;
+    background: var(--hero-bg);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow-y: hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.header h1{
+   margin-left: 1rem;
+   text-align: center;
+}
+
+.header button{
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: #2d157a;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.2rem 2rem;
+    border: none;
+    transition: 0.2s;
+}
+
+.header button:hover{
+    background:  #fff;
+    color: #2d157a;
+    
+}
+
+
+
+#main{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 2fr 1fr;
+    height: 100vh;
+}
+
+.data{
+    background: var(--companies-bg);    
+    overflow-y: scroll;
+    padding: 0rem 0 4rem;
+}
+
+.del{
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 0 !important;
+    background: rgb(255, 0, 34);
+    cursor: pointer;
+}
+
+.del:hover{
+    background-color: rgb(160, 4, 25) ;
+}
+
+.info{
+    color: rgb(0, 0, 0);
+    background: var(--nav-bg-color);
+}
+
+.info table{
+    width: 100%;
+}
+
+.data table{
+    width: 100%;
+}
+
+
+.data table,.data table th, .data table td{
+    border: 2px solid;
+}
+
+.data table td, .info th{
+    padding-left: 0.5rem;
+}
+
+.data table td{
+    font-weight: 500;
+}
+
+.info table tr td, .info table th , .info table{
+    border: 2px solid rgb(0, 0, 0);
+    text-align: end;
+}
+
+.info table tr td, .info table th{
+    padding-right: 1rem;
+}
+
+.numberOfEmails{
+    font-weight: 600;
+}
+
+
+@media screen and (max-width : 480px) {
+
+    body{
+        height: 100vh;
+        max-width: 100vh;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        padding: 1rem 0;
+    }
+
+    .header h1{
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+     
+    .header button{
+        margin:0;
+    }
+
+    #main{
+        display: grid;
+        width: 100vw;
+        min-width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        min-height: 100vh;
+    }
+
+    .info{
+        
+        order: -1;
+    }
+}
+
+
+
